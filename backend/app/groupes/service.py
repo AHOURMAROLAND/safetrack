@@ -4,7 +4,6 @@ from sqlalchemy import select, and_
 from fastapi import HTTPException, status
 from app.groupes.models import Groupe, Membership
 from app.auth.models import User
-from app.schemas_shared import ok
 
 
 async def creer_groupe(nom: str, max_membres: int, user: User, db: AsyncSession) -> dict:
